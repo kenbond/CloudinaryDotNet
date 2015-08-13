@@ -12,18 +12,19 @@
         <iconUrl>http://res.cloudinary.com/cloudinary/image/upload/w_128/cloudinary_logo_square.png</iconUrl>
         <projectUrl>http://cloudinary.com/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Official client library for easily integrating with the Cloudinary service</description>
+        <description>Official client library for easily integrating with the Cloudinary service with some custom modifications for VC.</description>
+		<releaseNotes>Chunked video upload. Uses cloudinary 1.0.22</releaseNotes>
         <dependencies>
-            <group targetFramework=".NETFramework3.5">
+            <!--<group targetFramework=".NETFramework3.5">
                 <dependency id="Newtonsoft.Json" version="4.5.11" />
-            </group>
+            </group>-->
             <group targetFramework=".NETFramework4.0">
                 <dependency id="Newtonsoft.Json" version="4.5.11" />
             </group>
         </dependencies>
     </metadata>
     <files>
-        <file src="Cloudinary\bin\Release\v3.5\CloudinaryDotNet.dll" target="lib\net35\CloudinaryDotNet.dll" />
+        <!--<file src="Cloudinary\bin\Release\v3.5\CloudinaryDotNet.dll" target="lib\net35\CloudinaryDotNet.dll" />-->
         <file src="Cloudinary\bin\Release\v4.0\CloudinaryDotNet.dll" target="lib\net40\CloudinaryDotNet.dll" />
     </files>
 </package>
