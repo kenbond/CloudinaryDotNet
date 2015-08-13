@@ -425,7 +425,7 @@ namespace CloudinaryDotNet
             return result;
         }
 
-		public VideoUploadResult UploadLargeRaw(VideoUploadParams parameters, int bufferSize = 20 * 1024 * 1024)
+		public VideoUploadResult UploadLargeVideo(VideoUploadParams parameters, int bufferSize = 20 * 1024 * 1024)
 		{
 			if (parameters.File.IsRemote)
 				throw new ArgumentException("The UploadLargeRaw method is intended to be used for large local file uploading and can't be used for remote file uploading!");
