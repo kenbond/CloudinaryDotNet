@@ -505,14 +505,8 @@ namespace CloudinaryDotNet
         /// <returns>Signature of parameters</returns>
         public string SignParameters(IDictionary<string, object> parameters)
         {
-	        if (parameters.ContainsKey("eager"))
-		        parameters.Remove("eager");
-
-			if (parameters.ContainsKey("eager_async"))
-				parameters.Remove("eager_async");
-
             StringBuilder signBase = new StringBuilder(String.Join("&", parameters
-                .Where(pair => pair.Value != null)
+                .Where(pair => pair.Value != null && pair.Key != "eager" && pair.Key != "eager_async")
                 .Select(pair => String.Format("{0}={1}", pair.Key,
                     pair.Value is IEnumerable<string>
                     ? String.Join(",", ((IEnumerable<string>)pair.Value).ToArray())
